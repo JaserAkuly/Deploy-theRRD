@@ -1,0 +1,16 @@
+<!-- ReDirect Is Not Completed Need To Update Links --
+
+<script>
+    var hash = location.hash;
+    if (hash.indexOf('slide=') > -1) {
+        location.replace('/screening/tenant?slide=1&product=25');
+    } else if (hash.indexOf('#tenant-Screening') > -1) {
+        location.replace('/screening/tenant');
+    } else if (hash.indexOf('employment-Screening') > -1) {
+        location.replace('/screening/employment');
+    } else if (hash.indexOf('incident-Reporting') > -1) {
+        location.replace('/screening/incident');
+    } else {
+        location.replace('/screening/tenant');
+    }
+</script>

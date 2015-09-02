@@ -1,0 +1,29 @@
+<!-- Modal {{id}} -->
+<div class="modal fade" id="{{id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">{{title}}</h4>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="modal-body" style="height: auto; overflow: hidden;">
+                <form class="form{{#if horizontal}}-horizontal{{/if}} js-validate {{#unless bootstrap}}j-forms{{/unless}}"
+                      id="form_{{id}}" role="form" method="post" action="{{url}}">
+                    {{{partial form}}}
+                    {{>form_recaptcha}}
+                    {{>form_buttons}}
+                </form>
+            </div>
+
+            {{#if footer}}
+                <!-- Modal Footer -->
+                <div class="modal-footer">{{{footer}}}</div>
+            {{/if}}
+        </div>
+    </div>
+</div>
+<!-- End of Modal {{id}} -->

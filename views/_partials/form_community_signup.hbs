@@ -1,0 +1,141 @@
+
+<!-- First Name -->
+<div class="col-md-6 unit">
+    <label class="label">First Name</label>
+
+    <div class="input">
+        <label class="icon-left" for="communityFirstName">
+            <i class="fa fa-user"></i>
+        </label>
+        <input type="text" class="required letterswithbasicpunc" id="communityFirstName" name="communityFirstName"
+               placeholder="e.g John">
+    </div>
+</div>
+
+<!-- Last Name -->
+<div class="col-md-6 unit">
+    <label class="label">Last Name</label>
+
+    <div class="input">
+        <label class="icon-left" for="communityLastName">
+            <i class="fa fa-user"></i>
+        </label>
+        <input type="text" class="required letterswithbasicpunc" id="communityLastName" name="communityLastName"
+               placeholder="e.g Doe">
+    </div>
+</div>
+
+<!-- Email -->
+<div class="col-md-6 unit">
+    <label class="label">Email</label>
+
+    <div class="input">
+        <label class="icon-left" for="communityEmail">
+            <i class="fa fa-envelope-o"></i>
+        </label>
+        <input type="text" class="required email" id="communityEmail" name="communityEmail"
+               placeholder="e.g John@therrd.com">
+    </div>
+</div>
+
+<!-- Phone Number -->
+<div class="col-md-6 unit">
+    <label class="label">Phone</label>
+
+    <div class="input">
+        <label class="icon-left" for="communityNumber">
+            <i class="fa fa-phone"></i>
+        </label>
+        <input type="text" class="required js-phone-input" placeholder="phone/mobile" id="communityNumber"
+               name="communityNumber">
+        <span class="tooltip tooltip-right-top">Your contact phone number</span>
+    </div>
+</div>
+
+<!-- start address 1 -->
+<div class="col-md-12 unit">
+    <label class="label">Address 1</label>
+
+    <div class="input">
+        <label class="icon-left" for="communityAddress1">
+            <i class="fa fa-building-o"></i>
+        </label>
+        <input type="text" class="required" id="communityAddress1"
+               placeholder="e.g. 443 Seventh Avenue, 16th Floor"
+               name="communityAddress1">
+    </div>
+</div>
+
+<!-- start address 2 -->
+<div class="col-md-12 unit">
+    <label class="label">Address 2</label>
+
+    <div class="input">
+        <label class="icon-left" for="communityAddress2">
+            <i class="fa fa-building-o"></i>
+        </label>
+        <input type="text" id="communityAddress2"
+               placeholder="e.g. Apartment, suite , unit, building, floor, etc."
+               name="communityAddress2">
+    </div>
+</div>
+
+<!-- Zip Code -->
+<div class="col-md-4 unit">
+    <label class="label">Post code</label>
+
+    <div class="input">
+        <label class="icon-left" for="communityZip">
+            <i class="fa fa-street-view"></i>
+        </label>
+        <input type="text" class="required digits" id="communityZip" placeholder="e.g. 75205" name="communityZip">
+    </div>
+</div>
+
+<!-- City -->
+<div class="col-md-4 unit">
+    <label class="label">City</label>
+
+    <div class="input">
+        <label class="icon-left" for="communityCity">
+            <i class="fa fa-angle-double-up"></i>
+        </label>
+        <input type="text" class="required" id="communityCity" placeholder="e.g. Dallas" name="communityCity">
+    </div>
+</div>
+
+<!-- State -->
+<div class="col-md-4 unit">
+    <label class="label">State</label>
+
+    <div class="input">
+        <label class="icon-left" for="communityState">
+            <i class="fa fa-angle-double-down"></i>
+        </label>
+        <input type="text" class="required" id="communityState" placeholder="e.g. Texas" name="communityState">
+    </div>
+</div>
+
+{{#extend 'extra_bottom'}}
+    <script src="/bower_components/ziptastic-jquery-plugin/jquery.ziptastic.js"></script>
+{{/extend}}
+
+<script>
+    $(function () {
+        var duration = 200;
+        var elements = {
+            state: $('#communityState'),
+            city: $('#communityCity'),
+            zip: $('#communityZip')
+        };
+
+        // Initialize the ziptastic and bind to the change of zip code
+        elements.zip.ziptastic()
+                .on('zipChange', function (evt, country, state, state_short, city, zip) {
+                    // State
+                    elements.state.val(state).parent().show(duration);
+                    // City
+                    elements.city.val(city).parent().show(duration);
+                });
+    });
+</script>

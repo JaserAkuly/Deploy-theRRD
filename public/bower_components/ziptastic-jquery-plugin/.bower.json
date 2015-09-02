@@ -1,0 +1,13 @@
+{
+  "name": "ziptastic-jquery-plugin",
+  "homepage": "https://github.com/daspecster/ziptastic-jquery-plugin",
+  "_release": "9d6f913b7b",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "9d6f913b7bccde682384f4ea649e028e2a212339"
+  },
+  "_source": "git://github.com/daspecster/ziptastic-jquery-plugin.git",
+  "_target": "*",
+  "_originalSource": "git://github.com/daspecster/ziptastic-jquery-plugin.git"
+}

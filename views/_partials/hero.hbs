@@ -1,0 +1,27 @@
+<!-- Hero Slider -->
+<div id="main-slider" class="one-page-static-wrap parallax" data-stellar-background-ratio="0.5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="main-slider {{#if hero.tour_button}}main-slider-with-button{{/if}}">
+                    <div class="slides">
+                        <h2>{{hero.title}}</h2>
+                        {{#if hero.small_title}}
+                            <p style="color: #f79100">
+                            {{#ifCond hero.small_title '==' 'default'}}
+                                The Ultimate Tool for Landlords, Property Managers, and Real Estate Agents
+                            {{else}}
+                                {{hero.small_title}}
+                            {{/ifCond}}
+                            </p>
+                        {{/if}}
+                        {{#if hero.tour_button}}
+                            <p><a href="/screening/tenant" class="btn border-white">Take A Tour</a></p>
+                        {{/if}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End of Hero Slider -->

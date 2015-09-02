@@ -1,0 +1,98 @@
+<!-- Footer -->
+{{#unless footer_without_top_margin}}<div class="divide40"></div>{{/unless}}
+
+<div id="footer">
+    <div class="container">
+        <div class="row">
+
+            <!-- About Us -->
+            <div class="col-md-4 margin40">
+                <div class="footer-col">
+                    <h3 class="heading">About us</h3>
+                    <p style="text-align: justify">Our products and services allow real estate professionals to screen tenants,
+                        report and view incidents for lease violations, list properties for sale or rental,
+                        post open positions for employment, search for vendors and more.
+                    </p>
+                    <ul class="address-info list-unstyled">
+                        <li><strong><i class="fa fa-fw fa-map-marker"></i> Address:</strong> 4514 Travis St. Suite 213 Dallas, TX 75205</li>
+                        <li><strong><i class="fa fa-fw fa-envelope"></i> Mail Us:</strong> <a href="mailto:support@theRRD.com?subject=Inquiry" style="color: #f79100">support@theRRD.com</a></li>
+                        <li><strong><i class="fa fa-fw fa-phone"></i> Phone:</strong> (855) 733-2289</li>
+                        <li><strong><i class="fa fa-fw fa-print"></i> Fax</strong> (214) 594-2804</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Recent Blog Post -->
+            <div class="col-md-4 margin40">
+                <div class="footer-col">
+                    <h3 class="heading">Recent Post</h3>
+                    <ul class="rss-widget list-unstyled popular-post">
+                        {{#each blog_feed}}
+                            <li class="rss-widget-item">
+                                <div class="popular-img">
+                                    <a href="{{link}}">
+                                        <img src="{{image}}?zoom=1.5&amp;resize=50%2C50" width="50" height="50">
+                                    </a>
+                                </div>
+                                <div class="popular-desc">
+                                    <h5><a href="{{link}}">{{title}}</a></h5>
+                                    <h6>{{date}}</h6>
+                                </div>
+                            </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Social Media Links & Newsletter -->
+            <div class="col-md-4 margin40">
+                <div class="footer-col">
+                    <h3 class="heading">Social</h3>
+                    <ul class="list-inline social-1 text-center">
+                        <li><a href="https://www.facebook.com/TheRRD"><i class="fa fa-facebook" data-toggle="tooltip" title="" data-original-title="Facebook" data-placement="top"></i></a></li>
+                        <li><a href="https://twitter.com/The_RRD"><i class="fa fa-twitter" data-toggle="tooltip" title="" data-original-title="Twitter" data-placement="top"></i></a></li>
+                        <li><a href="https://plus.google.com/b/112073275016274067831/+Therrd"><i class="fa fa-google-plus" data-toggle="tooltip" title="" data-original-title="Google Plus" data-placement="top"></i></a></li>
+                        <li><a href="https://www.youtube.com/channel/UCsbLx3wN18t1d2g4uvn6QQA"><i class="fa fa-youtube" data-toggle="tooltip" title="" data-original-title="YouTube" data-placement="top"></i></a></li>
+                    </ul>
+                </div>
+
+                <!-- News Letter -->
+                <div class="divide30"></div>
+                <div class="footer-col">
+                    <h3 class="heading">Newsletter</h3>
+                    <p>Sign up to get useful information on screening tenants,
+                        being FCRA compliant, property management and other helpful real estate material.
+                    </p>
+                    <form class="newsletter-form">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="input-group">
+                                    <label class="sr-only" for="subscribe-email">Email address</label>
+                                    <input type="email" name="email" class="form-control" id="subscribe-email" placeholder="Enter your email">
+                                            <span class="input-group-btn">
+                                                <button id="submitNewsletter" name="submit" type="submit" value="Send" class="btn btn-lg btn-theme-bg">Ok</button>
+                                            </span>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <div class="footer-bottom-nav">
+                <a href="/advertising">Advertising</a> |
+                <a href="/legal/terms-of-service">Terms of Service</a> |
+                <a href="/legal/privacy-policy">Privacy Policy</a> |
+                <a href="/legal/dispute-process">Dispute Process</a> |
+                <a href="/company/affiliate-associations">Affiliate & Associations</a> |
+                <a href="/AppRegister/ir-app">App Register</a>
+            </div>
+            <div>&copy; 2015 theRRD. All rights reserved.</div>
+        </div>
+    </div>
+</div>
+<!-- End of Footer -->

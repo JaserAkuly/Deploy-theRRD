@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>head}}
+
+    {{{block 'extra_head'}}}
+</head>
+
+<body onload="shiftWindow();">
+    <div id="page">
+        {{>navbar}}
+
+        <div id="content">
+            {{#if hero}}
+                {{>hero}}
+            {{/if}}
+
+            {{{body}}}
+        </div>
+
+        {{>footer}}
+    </div>
+
+    {{#each modals}}
+        {{>modal this}}
+    {{/each}}
+
+
+    {{#if owl}}
+        {{>scripts_owl}}
+    {{/if}}
+
+    {{>bottom}}
+
+    {{{block 'extra_bottom'}}}
+</body>
+</html>

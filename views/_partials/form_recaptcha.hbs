@@ -1,0 +1,13 @@
+{{#if bootstrap}}
+    <div class="form-group">
+        {{#if horizontal}}
+            <div class="col-sm-12"><div class="recaptcha"></div></div>
+        {{else}}
+            <div class="recaptcha"></div>
+        {{/if}}
+    </div>
+{{else}}
+    <div class="span12 unit">
+        <div class="recaptcha"></div>
+    </div>
+{{/if}}

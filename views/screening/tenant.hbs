@@ -1,0 +1,107 @@
+{{>screening_menu}}
+
+{{#extend 'extra_head'}}
+    <link rel="stylesheet" href="/bower_components/ion.rangeSlider/css/ion.rangeSlider.css">
+    <link rel="stylesheet" href="/bower_components/ion.rangeSlider/css/ion.rangeSlider.skinHTML5.css">
+    <link rel="stylesheet" href="/css/slider.css">
+{{/extend}}
+
+{{#extend 'extra_bottom'}}
+    <script src="/bower_components/ion.rangeSlider/js/ion.rangeSlider.min.js"></script>
+    <script src="/js/tenant_screening.js"></script>
+    <script src="/js/slide_popup.js"></script>
+{{/extend}}
+
+<div class="container">
+    <h3 class="heading">Tenant Screening Packages</h3>
+
+    <p class="dropcap" style="text-align: justify; margin-bottom: 10px;">Credit reports and
+        background check data provide a way to mitigate risk, coupled with our FREE proprietary Incident Reporting,
+        we combine information collected daily from landlords, property managers, property owners and real
+        estate agents that allows for tracking and recording of leasing incidents and violations
+        that occur on the property. theRRD provides you the most thorough tenant screening service
+        available.</p>
+
+    <p class="text-center" style="font-size: 32px; margin: 20px 0 0 0;">
+        <span><i class="fa fa-home"></i> Number of Units:</span>
+        <span id="value" style="border:0; font-size: 32px; color:#f6931f; font-weight:bold;"></span>
+
+
+    </p>
+
+    <div id="screeningSlider"></div>
+
+    {{>ts_package_instant}}
+    {{>ts_package_base}}
+
+    {{>ts_product_1}}
+    {{>ts_product_2}}
+    {{>ts_product_3}}
+    {{>ts_product_4}}
+    {{>ts_product_5}}
+    {{>ts_product_6}}
+    {{>ts_product_7}}
+    {{>ts_product_8}}
+    {{>ts_product_9}}
+    {{>ts_product_10}}
+    {{>ts_product_11}}
+    {{>ts_product_12}}
+
+    <div class="divide80"></div>
+
+    <div class="row">
+
+        <!-- A La Carte Options -->
+        <div class="col-md-4 margin20">
+            <div class="service-box">
+                <h4><i style="color: #f89101" class="fa fa-shopping-cart"></i> A La Carte</h4>
+                <ul>
+                    <li data-toggle="tooltip" title="">Incident Reporting Database</li>
+                    <li data-toggle="tooltip" title="">Rapsheet (National Criminal Background Search)</li>
+                    <li data-toggle="tooltip" title="">Social Security Number Validation</li>
+                    <li data-toggle="tooltip" title="">Sex Offender Database Check</li>
+                    <li data-toggle="tooltip" title="">Evictions, Liens, and Judgment Search</li>
+                    <li data-toggle="tooltip" title="">Trans Union And Equifax Credit Report</li>
+                    <li data-toggle="tooltip" title="">FICO Score</li>
+                    <li data-toggle="tooltip" title="">Bankruptcy Report</li>
+                    <li data-toggle="tooltip" title="">ID Mismatch Alert</li>
+                    <li data-toggle="tooltip" title="">Equifax Credit Report</li>
+                    <li data-toggle="tooltip" title="">Sex Offender Search (Meagan’s Law)</li>
+                    <li data-toggle="tooltip" title="">Property Postings</li>
+                    <li data-toggle="tooltip" title="">Employment Postings</li>
+                    <li data-toggle="tooltip" title="">Employment Screening</li>
+                    <li data-toggle="tooltip" title="">Manual Services - Employment Verification</li>
+                    <li data-toggle="tooltip" title="">Manual Services - Education Verification</li>
+                    <li data-toggle="tooltip" title="">Manual Services - Rental Verification</li>
+                    <li data-toggle="tooltip" title="">State Criminal Background Check (Felony & Misdemeanor) + Court Fees</li>
+                    <li data-toggle="tooltip" title="">County Criminal Background Check (Felony & Misdemeanor) + Court Fees</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <p>Our pricing is set up as a 100% customizable. You can choose from our cost saving
+                membership
+                packages above or you can add on services of your choosing a la carte. Our packages
+                offer
+                discounted rate pricing with more benefits for clients that have large transaction
+                volume.<br>
+                <br>With customized pricing and packaged plans to fit your specific needs, we deliver a
+                significantly better value than other tenant screening service providers. Already have a
+                screening provider? Switch to theRRD and save 20%! Let us review a copy of your current
+                tenant
+                screening provider invoice and we will do a comparison of your current cost and
+                products.<br>
+                <br>Aside from a minimal savings of 20% off the cost per screening, we may be able to
+                include
+                more screening products at this reduced cost giving you the ability to perform a more
+                comprehensive screening on your applicant, while still saving money. </p>
+        </div>
+
+        <div class="col-md-4">
+            {{>screening_benefits}}
+        </div>
+    </div>
+</div>
+
+{{>ts_panels}}
